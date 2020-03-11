@@ -9,10 +9,10 @@
 4. Once you are ready to run an application, please type "flask run" in your oppened terminal. You should see the message 
   ```" * Running on http://127.0.0.1:5000/ (Press CTRL+C to quit)"```.<br>
 5. Open your bash terminal in a separate window. You can use cUrl command-line tool to upload the csv file and get proper results.<br>
-  5.1. Type ```curl http://127.0.0.1:5000/getAddresses -d 'file=http://127.0.0.1:5000/static/data_sample.csv'``` in bash, where:<br>
+6. Type ```curl http://127.0.0.1:5000/getAddresses -d 'file=http://127.0.0.1:5000/static/data_sample.csv'``` in bash, where:<br>
         ```http://127.0.0.1:5000/getAddresses``` - app url<br>
         ```-d``` - Sends the specified data in a POST request to the HTTP server, in the same way that a browser does when a                      user has filled in an HTML form and presses the submit button.<br>
         ```http://127.0.0.1:5000/static/data_sample.csv``` - file destination<br>
- 6. The app should return the json result which consist of:<br>
+ 7. The app should return the json result which consist of:<br>
     - ```links```, which include all posible direct names between the locations and destinations between them, and<br>
     - ```points```, which stores detailed information regarding the locations you provided in your csv file. This infromation was collected from the ArcGis API using the special arcgis function (```reverse_geocode```, for more details ```https://developers.arcgis.com/python/guide/reverse-geocoding/```)
